@@ -1,47 +1,47 @@
 .holder{
-    display: grid;
-    grid-template-areas:
-        "one one five "
-        "three two four";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    width: 400px;
-    height: 200px;
-    background-color: black;
-    padding: 5px;
-    border-radius: 5px;
+    list-style: none;
+    width: 100%;
+    border: 10px solid blue;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-radius: 100px 100px 0 0;
 }
 
 .item{
+    flex-basis: 300px;
+    height: 150px;
+    border: 1px solid black;
+    font-size: 50px;
     display: flex;
-align-items: center;
-justify-content: center;
-font-size: 2em;
-color: black;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
 }
 
-
-.item:nth-child(1) {
-    grid-area: one;
-    background-color: red; 
+.item:nth-child(1){
+   background-color: tomato;
+   order: 1;
+   flex-basis: calc(100% / 2);
 }
 
-.item:nth-child(2) {
-    grid-area: two;
-    background-color: aqua; 
-}
+.item:nth-child(2){
+    background-color: blue;
+    order: 4;
+ }
 
-.item:nth-child(3) {
-    grid-area: three;
-    background-color: purple; 
-}
+ .item:nth-child(3){
+    background-color: purple;
+    order: 3;
+ }
 
-.item:nth-child(4) {
-    grid-area: four;
-    background-color: greenyellow; 
-}
+ .item:nth-child(4){
+    background-color: green;
+    order: 5;
+ }
 
-.item:nth-child(5) {
-    grid-area: five;
+ .item:nth-child(5){
     background-color: orange; 
-}
+    order: 2; 
+    flex-basis: calc(100% / 2);
+ }
